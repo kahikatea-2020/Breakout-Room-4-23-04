@@ -27,6 +27,8 @@ question {
 
 -Have an answer form a user can fill out to save notes for later.
 
+-Ability for the user to input their own questions and answers into our .js file
+
 
 ## Steps
 

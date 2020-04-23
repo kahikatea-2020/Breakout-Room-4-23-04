@@ -73,3 +73,17 @@ Will be placed in .js file
 ##### Stretch
 - Go to a randomly assigned card based on the difference between between the amount of times the question has been asked and the amount of times it has been answered correctly 
 
+
+# Team Roles
+
+## David
+
+
+## Raymond
+-Moral Support
+
+## Tom
+
+
+## Matthew
+

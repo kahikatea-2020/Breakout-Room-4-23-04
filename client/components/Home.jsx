@@ -14,33 +14,47 @@ class Home extends Component {
       idx: 0
     }
     this.nextQuestion = this.nextQuestion.bind(this)
+    this.toggleAnswer = this.toggleAnswer.bind(this)
   }
 
   nextQuestion(cardDisplayed) {
+
     // console.log('index', this.state.idx)
     let index = this.state.idx
     index++
-    if (index >= this.state.cards.length){
+    if (index >= this.state.cards.length) {
       index = 0
     }
-    console.log(index)
     this.setState({
-      idx: index
+      idx: index,
+      showAnswer: false
     })
   }
-    
-      
-    
-      
+
+  toggleAnswer() {
+    if (!this.state.showAnswer) {
+        this.setState({
+            showAnswer: true
+        })
+    } else {
+        this.setState({
+            showAnswer: false
+        })
+    }
+}
+
+
 
   render() {
     console.log(this.state.cards)
     return (
       <>
-        <Card card={this.state.cards[this.state.idx]} nextQuestion={this.nextQuestion} />
-
+        <Card 
+         card={this.state.cards[this.state.idx]}
+         nextQuestion={this.nextQuestion}
+         toggleAnswer = {this.toggleAnswer}
+         showAnswer={this.state.showAnswer} />
       </>
-
     )
   }
 }

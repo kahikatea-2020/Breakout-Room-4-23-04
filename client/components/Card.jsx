@@ -1,31 +1,33 @@
 import React from 'react'
+import Answer from './Answer'
+import Question from './Question'
 
 class Card extends React.Component {
-    state = {
-        showAnswerClick: false
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //         showAnswer: 
 
-    }
-// let answer= null
-//     if (this.state.showAnswer) {
-        
-//     }
+    //     }
+    //     this.toggleAnswer = this.toggleAnswer.bind(this)
+    // }
 
+    // componentDidMount() {
+    //     this.setState({
+    //         showAnswer: this.props.showAnswer
+
+    //     })
+    // }
     render() {
+        let cardDisplay
+        if (!this.props.showAnswer) {
+            cardDisplay = <Question question={this.props.card.question} toggleAnswer={this.props.toggleAnswer} />
+        } else {
+            cardDisplay = <Answer answer={this.props.card.answer} nextQuestion={this.props.nextQuestion} toggleAnswer={this.props.toggleAnswer} />
+        }
         return (
             <>
-                <h2>Question</h2>
-                <p>{this.props.card.question}</p>
-
-                {/* <button onClick={handleClick}>Show Answer</button> */}
-
-                <button onClick={handleClick}>Show answer</button>
-                {/* conditionally display this after the show answer is clicked */}
-                <h2>Answer</h2>
-                <p>{this.props.card.answer}</p>
-                <p>Was your answer correct?</p>
-
-                <button onClick={() => this.props.nextQuestion()}>Yes</button>
-                <button onClick={() => this.props.nextQuestion()}>No</button>
+                {cardDisplay}
             </>
         )
     }

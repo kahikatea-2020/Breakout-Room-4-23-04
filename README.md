@@ -17,17 +17,17 @@ question {
 
 
 ## MVP 
--Render a flash card.
+- Render a flash card.
 
--Keep track of whether the answer was correct or not.
+- Keep track of whether the answer was correct or not.
 
--Track the amount of times a user has gotten the question right or wrong.
+- Track the amount of times a user has gotten the question right or wrong.
 
 ## Stretch Goals
 
--Have an answer form a user can fill out to save notes for later.
+- Have an answer form a user can fill out to save notes for later.
 
--Ability for the user to input their own questions and answers into our .js file
+- Ability for the user to input their own questions and answers into our .js file
 
 
 ## Steps
@@ -80,7 +80,7 @@ Will be placed in .js file
 
 
 ## Raymond
--Moral Support
+- Moral Support
 
 ## Tom
 

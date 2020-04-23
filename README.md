@@ -26,3 +26,22 @@ question {
 ## Stretch Goals
 
 -Have an answer form a user can fill out to save notes for later.
+
+
+## Steps
+
+### Components
+
+Heading Component
+- The header of the page
+
+Home Component
+- Where you can choose which set of questions you want to answer, or what sort of questions you want
+- Radio button select? 
+
+Main Card Display
+- Displays the question, and will flip to show the answer
+
+Statistics
+- Display how often a correct answer was given, how often the question was asked
+

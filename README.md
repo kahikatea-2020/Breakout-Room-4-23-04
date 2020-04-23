@@ -64,3 +64,9 @@ Will be placed in .js file
 
 ##### Stretch 
 - Randomly render a question based on the difference between the amount of times the question has been asked and the amount of times it has been answered correctly
+
+#### To go to other cards
+##### MVP 
+- Increment the index by one and go to the next element of the array, or decrement it to go to the previous one
+###### Stretch
+- Go to a randomly assigned card based on the difference between between the amount of times the question has been asked and the amount of times it has been answered correctly 

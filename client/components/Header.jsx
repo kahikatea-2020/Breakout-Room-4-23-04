@@ -5,6 +5,7 @@ const Header = () => {
 		<>
 			<header>
 				<h1>Flash Card App</h1>
+				<h3></h3>
 			</header>
 		</>
 	)

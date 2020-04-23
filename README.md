@@ -42,6 +42,25 @@ Home Component
 Main Card Display
 - Displays the question, and will flip to show the answer
 
+Button Component
+- Will render after the card has been flipped, will have the options for whether the question was correct or not, and for going to the next question
+
 Statistics
 - Display how often a correct answer was given, how often the question was asked
 
+### Routes
+
+React Routing
+
+### Data
+
+Will be placed in .js file
+
+### Functions
+
+#### To display a single card
+##### MVP 
+- Use the index of the array and increment it between questions
+
+##### Stretch 
+- Randomly render a question based on the difference between the amount of times the question has been asked and the amount of times it has been answered correctly

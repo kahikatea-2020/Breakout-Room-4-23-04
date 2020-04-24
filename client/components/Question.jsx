@@ -6,7 +6,6 @@ const Question = (props) => {
       
     <h2>Question {props.id}</h2>
     <p className="question">{props.question}</p>
-    <button onClick = {props.toggleAnswer}>Flip Card</button>
     </div>
     )
 }

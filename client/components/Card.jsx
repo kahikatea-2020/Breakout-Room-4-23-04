@@ -10,15 +10,15 @@ class Card extends React.Component {
             cardDisplay = <Question 
             question = {this.props.card.question}
             id = {this.props.card.id}
-            toggleAnswer = {this.props.toggleAnswer} />
+            />
         } else {
             cardDisplay = <Answer answer={this.props.card.answer} nextQuestion={this.props.nextQuestion}
             id = {this.props.card.id}
-            toggleAnswer = {this.props.toggleAnswer} />
+         />
         }
         return (
             <>
-                <div className='cardGrid'>
+                <div onClick = {this.props.toggleAnswer} className='cardGrid'>
                     {cardDisplay}
                 </div>
                 <button onClick = {this.props.showCard}>Add a Card</button>

@@ -37,30 +37,34 @@ class Home extends Component {
     }
   }
 
-  createCardArray() {
+  createCardArray(ignore) {
     let workArr = []
     this.state.cards.forEach(card => {
-      for (let i = 0; i < card.priority; i++) {
-        let idx = card.id
-        idx--
-        workArr.push(idx)
+      if (card.id !== ignore) {
+        for (let i = 0; i < card.priority; i++) {
+          let idx = card.id
+          idx--
+          workArr.push(idx)
+        }
       }
     })
+    if (workArr.length === 0) {
+      alert('Congratulations you have mastered all of these questions!')
+    }
     this.setState({
       cardArray: workArr
     })
 
   }
 
-  drawCard() {
-    this.createCardArray()
+  drawCard(id) {
+    this.createCardArray(id)
     setTimeout(() => {
       let max = this.state.cardArray.length
       let idx = Math.floor(Math.random() * Math.floor(max))
       let selection = this.state.cardArray[idx]
       this.setState({ idx: selection })
-      console.log(this.state.cardArray)
-    }, 50)
+    }, 1)
 
 
   }
@@ -73,7 +77,7 @@ class Home extends Component {
         card.priority = priority
       }
     })
-    setTimeout(this.drawCard(), 50)
+    setTimeout(this.drawCard(id), 1)
 
     // console.log('index', this.state.idx)
     // let index = this.state.idx
@@ -125,7 +129,7 @@ class Home extends Component {
           this.addCard(addedCard)
         }
         }
-        arrLength = {this.state.cards.length} />
+        arrLength={this.state.cards.length} />
     }
     return (
       <>
@@ -137,4 +141,4 @@ class Home extends Component {
 
   }
 }
-  export default Home
+export default Home

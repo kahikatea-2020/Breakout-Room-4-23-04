@@ -3,31 +3,25 @@ import Answer from './Answer'
 import Question from './Question'
 
 class Card extends React.Component {
-    // constructor() {
-    //     super()
-    //     this.state = {
-    //         showAnswer: 
-
-    //     }
-    //     this.toggleAnswer = this.toggleAnswer.bind(this)
-    // }
-
-    // componentDidMount() {
-    //     this.setState({
-    //         showAnswer: this.props.showAnswer
-
-    //     })
-    // }
+  
     render() {
         let cardDisplay
         if (!this.props.showAnswer) {
-            cardDisplay = <Question question={this.props.card.question} toggleAnswer={this.props.toggleAnswer} />
+            cardDisplay = <Question 
+            question = {this.props.card.question}
+            id = {this.props.card.id}
+            toggleAnswer = {this.props.toggleAnswer} />
         } else {
-            cardDisplay = <Answer answer={this.props.card.answer} nextQuestion={this.props.nextQuestion} toggleAnswer={this.props.toggleAnswer} />
+            cardDisplay = <Answer answer={this.props.card.answer} nextQuestion={this.props.nextQuestion}
+            id = {this.props.card.id}
+            toggleAnswer = {this.props.toggleAnswer} />
         }
         return (
             <>
-                {cardDisplay}
+                <div className='cardGrid'>
+                    {cardDisplay}
+                </div>
+                <button onClick = {this.props.showCard}>Add a Card</button>
             </>
         )
     }

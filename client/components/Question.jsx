@@ -2,12 +2,12 @@ import React from 'react'
 
 const Question = (props) => {
   return (
-      <>
-    <h2>Question {props.card.id}</h2>
-    <p>{props.question}</p>
-
-    <button onClick = {props.toggleAnswer}>Show Answer</button>
-    </>
+    <div className='card'>
+      
+    <h2>Question {props.id}</h2>
+    <p className="question">{props.question}</p>
+    <button onClick = {props.toggleAnswer}>Flip Card</button>
+    </div>
     )
 }
 

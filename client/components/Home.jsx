@@ -48,11 +48,11 @@ class Home extends Component {
         }
       }
     })
-    if (workArr.length === 0){
+    if (workArr.length === 0) {
       alert('Congratulations you have mastered all of these questions!')
     }
     this.setState({
-    cardArray: workArr
+      cardArray: workArr
     })
 
   }
@@ -64,8 +64,7 @@ class Home extends Component {
       let idx = Math.floor(Math.random() * Math.floor(max))
       let selection = this.state.cardArray[idx]
       this.setState({ idx: selection })
-      console.log(this.state.cardArray)
-    }, 50)
+    }, 1)
 
 
   }
@@ -78,7 +77,7 @@ class Home extends Component {
         card.priority = priority
       }
     })
-    setTimeout(this.drawCard(id), 50)
+    setTimeout(this.drawCard(id), 1)
 
     // console.log('index', this.state.idx)
     // let index = this.state.idx

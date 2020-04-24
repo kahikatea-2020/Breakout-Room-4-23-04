@@ -106,6 +106,8 @@ class Home extends Component {
     console.log(cards)
   }
 
+  
+
 
 
   render() {

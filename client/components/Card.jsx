@@ -3,10 +3,12 @@ import Answer from './Answer'
 import Question from './Question'
 
 class Card extends React.Component {
-  
+
+
     render() {
         let cardDisplay
         if (!this.props.showAnswer) {
+
             cardDisplay = <Question 
             question = {this.props.card.question}
             id = {this.props.card.id}
@@ -19,9 +21,10 @@ class Card extends React.Component {
         return (
             <>
                 <div onClick = {this.props.toggleAnswer} className='cardGrid'>
+
                     {cardDisplay}
                 </div>
-                <button onClick = {this.props.showCard}>Add a Card</button>
+                <button onClick={this.props.showCard}>Add a Card</button>
             </>
         )
     }

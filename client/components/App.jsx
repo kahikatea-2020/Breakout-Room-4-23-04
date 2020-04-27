@@ -8,7 +8,7 @@ import Home from './Home'
 const App = () => {
 	return (
 		<div className='container'>
-			<Header />
+			{/* <Header /> */}
 			<Home />
 			
 		</div>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import Header from './Header'
 import Card from './Card'
+import Header from './Header'
 import cards from '../cards.js'
 import AddCard from './AddCard'
+import {Route} from 'react-router-dom'
 
 
 
@@ -18,7 +19,7 @@ class Home extends Component {
     }
     this.nextQuestion = this.nextQuestion.bind(this)
     this.toggleAnswer = this.toggleAnswer.bind(this)
-    this.showCard = this.showCard.bind(this)
+    // this.showCard = this.showCard.bind(this)
   }
 
   componentDidMount() {
@@ -29,13 +30,13 @@ class Home extends Component {
 
   }
 
-  showCard() {
-    if (this.state.showCard) {
-      this.setState({ showCard: false })
-    } else {
-      this.setState({ showCard: true })
-    }
-  }
+  // showCard() {
+  //   if (this.state.showCard) {
+  //     this.setState({ showCard: false })
+  //   } else {
+  //     this.setState({ showCard: true })
+  //   }
+  // }
 
   createCardArray(ignore) {
     let workArr = []
@@ -107,7 +108,6 @@ class Home extends Component {
     this.setState(state => ({
       cards: state.cards.concat([cardSubmitted])
     }))
-    console.log(cards)
   }
 
   
@@ -115,27 +115,36 @@ class Home extends Component {
 
 
   render() {
-    let display
-    if (this.state.showCard) {
-      display = <Card
-        card={this.state.cards[this.state.idx]}
-        nextQuestion={this.nextQuestion}
-        toggleAnswer={this.toggleAnswer}
-        showAnswer={this.state.showAnswer}
-        showCard={this.showCard} />
-    } else {
-      display = <AddCard showCard={this.showCard}
-        onAddCard={(addedCard) => {
-          this.addCard(addedCard)
-        }
-        }
-        arrLength={this.state.cards.length} />
-    }
+    // let display
+    // if (this.state.showCard) {
+    //   display = <Card
+    //     card={this.state.cards[this.state.idx]}
+    //     nextQuestion={this.nextQuestion}
+    //     toggleAnswer={this.toggleAnswer}
+    //     showAnswer={this.state.showAnswer}
+    //     showCard={this.showCard} />
+    // } else {
+    //   display = <AddCard showCard={this.showCard}
+    //     onAddCard={(addedCard) => {
+    //       this.addCard(addedCard)
+    //     }
+    //     }
+    //     arrLength={this.state.cards.length} />
+    // }
     return (
       <>
-
-        {display}
-
+        <Route exact path="/" render={() => (
+          <div>
+            <Header />
+            <Card card={this.state.cards[this.state.idx]}
+              nextQuestion={this.nextQuestion}
+              toggleAnswer={this.toggleAnswer}
+              showAnswer={this.state.showAnswer}
+              showCard={this.showCard}
+            />
+          </div>
+        )}/>
+          <Route path="/AddCard" component = {AddCard}/>
       </>
     )
 

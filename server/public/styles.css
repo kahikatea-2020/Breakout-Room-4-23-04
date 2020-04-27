@@ -134,3 +134,12 @@ h1, h2, h3, h4, h5 {
   margin-left: 20px;
   align-content: center;
 }
+
+.addIcon {
+  background: url("https://image.flaticon.com/icons/svg/60/60740.svg") center no-repeat;
+  background-size: contain;
+  padding: 40px;
+  display: table;
+  margin: 20px auto;
+  border: none;
+ }

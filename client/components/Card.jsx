@@ -1,6 +1,7 @@
 import React from 'react'
 import Answer from './Answer'
 import Question from './Question'
+import {Link} from 'react-router-dom'
 
 class Card extends React.Component {
 
@@ -24,7 +25,8 @@ class Card extends React.Component {
 
                     {cardDisplay}
                 </div>
-                <button onClick={this.props.showCard}>Add a Card</button>
+                {/* <button onClick={this.props.showCard}>Add a Card</button> */}
+                <Link className ="addIcon" to="/AddCard"></Link>
             </>
         )
     }
